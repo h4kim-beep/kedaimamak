@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mamak Sultan · 2 Juta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <i class="fas fa-utensils"></i>
+            <h1>Mamak Sultan <span>Premium</span></h1>
+        </div>
+        <div class="header-right">
+            <div class="order-badge" id="tableNumberDisplay">Meja #<span id="tableNum">5</span></div>
+            <button class="icon-btn" id="clearAllBtn" title="Kosongkan semua"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Menu Panel -->
+        <div class="menu-panel">
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="categoryTabs">
+                <!-- JS akan generate -->
+            </div>
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- JS akan generate -->
+            </div>
+        </div>
+
+        <!-- Cart Panel -->
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-basket"></i> Order Semasa</h2>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i class="fas fa-mug-hot"></i>
+                    <p>Tekan menu untuk mula order</p>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">RM 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>SST (6%)</span>
+                        <span id="tax">RM 0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">RM 0.00</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn-secondary" id="saveOrderBtn"><i class="fas fa-save"></i> Simpan</button>
+                    <button class="btn-primary" id="printBillBtn"><i class="fas fa-print"></i> Print Bill</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk tukar meja -->
+    <div class="modal" id="tableModal">
+        <div class="modal-content">
+            <h3>Tukar Nombor Meja</h3>
+            <input type="number" id="tableInput" min="1" max="99" value="5">
+            <div class="modal-actions">
+                <button class="btn-secondary" id="closeModalBtn">Batal</button>
+                <button class="btn-primary" id="saveTableBtn">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
